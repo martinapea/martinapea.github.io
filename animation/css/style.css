@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+}
+main {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    justify-content: center;
+    height: 100vh;
+    align-content:  center;
+    gap: 10px;
+}
+.image {
+    border-radius: 30px;
+}
+.image_1 {
+    transition-property: outline transform;
+    transition-duration: 10s;
+    transition-timing-function: cubic-bezier(.87,.09,.12,1.48);
+    transition-delay: 3s;
+}
+.image_1:hover {
+    transform: scale(0.5, 0.5);
+    outline: 10px solid green;
+}
+.image_2:hover {
+    transform: scale(2);
+
+}
+.image_2 {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    transition-duration: 2s;
+    transition-delay: 0s;
+}
+.image_3 {
+    transition-property: all;
+    transition-duration: 3s;
+    transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+}
+.image_3:hover {
+    transform: rotate(180deg);
+
+}
+.image_4 {
+    transition-property: all;
+    transition-duration: 3s;
+    transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+}
+.image_4:hover {
+    transform: rotate(-360deg);
+}
+   
+.image_5{
+    transition-property: all;
+    transition-duration: 4s;
+    transition-timing-function: ease-in-out;
+}
+.image_5:hover {
+    transform: translate(-840px, 210px) rotate(360deg) scale(3);
+}
+.image_4 {
+    width: 200px;
+    height: 200px;
+}
+.image_6{
+    transition-property: all;
+    transition-duration: 4s;
+    transition-timing-function: ease-in-out;
+}
+.image_6:hover {
+    transform: translate(420px, -105px)  scale(3);
+}
+.image_7 {
+    animation-name: roll;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+@keyframes roll {
+    25% {
+        transform: rotate(360deg);
+    }
+    50% {
+        transform: rotate(-360deg);
+    }
+    75% {
+        transform: scale(2);
+    }
+    90% {
+        transform: translate(-100px);
+
+    }
+}
+.image_8 {
+    animation-name: move;
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+@keyframes move {
+    20% {
+        transform: translate(420px, 0);
+     }
+     40% {
+        transform: translate(420px, -210px);
+     }
+     60% {
+        transform: translate(-420px, -210px);
+     }
+     80% {
+        transform: translate(-420px, 0);
+     }
+
+}
+.image_9{
+    animation-name: move2;
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+@keyframes move2 {
+    20% {
+        transform: translate(210px, 0);
+     }
+     40% {
+        transform: translate(210px, -210px);
+     }
+     60% {
+        transform: translate(-630px, -210px);
+     }
+     80% {
+        transform: translate(-630px, 0);
+     }
+
+}
